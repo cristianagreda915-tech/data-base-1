@@ -19,3 +19,35 @@ CREATE TABLE users (
 
 
 INSERT INTO users (ide_number, first_name, last_name, mobile_number, email, password) VALUES ('1234567890', 'John', 'Doe', '555-1234', 'john.doe@example.com', 'password123');
+
+
+--select * from users;
+
+
+/*
+INSERT INTO users (
+ide_number, 
+first_name, 
+last_name, 
+mobile_number, 
+email, 
+password
+) 
+
+VALUES 
+(
+'1234567890', 
+'Peter', 
+'Perez', 
+'555-1234', 
+'Pepe.doe2@example.com', 
+'password123546');
+
+*/
+
+select 
+u.first_name as nombres, 
+u.last_name as apellido,
+u.first_name ||' '|| u.last_name as fullname,
+case when u.status = true then 'Activo' else 'Inactivo' end
+from users u;
