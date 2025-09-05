@@ -22,6 +22,7 @@ INSERT INTO users (ide_number, first_name, last_name, mobile_number, email, pass
 
 
 --select * from users;
+select * from users u;
 
 
 /*
